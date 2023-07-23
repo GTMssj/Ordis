@@ -12,8 +12,10 @@ isIdle = True
 
 time_stamp = 0
 recLines = "Ordis已部署"
-channel = "D054U06A8V6"
-token = "xoxp-5152913700289-5137345442517-5627216459760-d8323ea86470723603cdb76070758d3c"
+with open("Data/data.json", "r", encoding="utf8") as data:
+    saved_data = json.load(data)
+    token = saved_data["token"]
+    channel = saved_data["channel"]
 
 voices = [
     {
